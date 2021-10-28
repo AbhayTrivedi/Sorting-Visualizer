@@ -1,0 +1,46 @@
+
+body{
+   font-family: Montserrat;
+   background-color: pink;
+}
+
+h1{
+   text-align: center;
+}
+
+#sliderText{
+   margin: 0.8%;
+   font-size: 1.3em;
+}
+
+.btn{
+   margin-left: 2px;
+   margin-right: 2px;
+}
+
+
+.bar{
+   /* background: linear-gradient(#e66465, #9198e5); */
+   background-color: #58b7ff;
+   width: 28px;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   transition: 0.2s all ease;
+}
+
+#bars{
+   width: 80%;
+   height: 26em;
+   position: relative;
+   margin: 5% auto;
+   border-bottom: 2px solid darkgrey;
+} 
+
+.block__id {
+   position: absolute;
+   top: -24px;
+   width: 100%;
+   text-align: center;
+}
+ 
