@@ -20,13 +20,11 @@ h1{
 
 
 .bar{
-   /* background: linear-gradient(#e66465, #9198e5); */
-   background-color: #58b7ff;
+   background: linear-gradient(#e66465, #9198e5);
+   /* background-color: #58b7ff; */
    width: 28px;
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   transition: 0.2s all ease;
+   display: inline-block;
+   margin: 0 0.1%;
 }
 
 #bars{
@@ -34,13 +32,13 @@ h1{
    height: 26em;
    position: relative;
    margin: 5% auto;
-   border-bottom: 2px solid darkgrey;
+   /* border-bottom: 2px solid darkgrey; */
 } 
 
-.block__id {
+/* .block__id {
    position: absolute;
    top: -24px;
    width: 100%;
    text-align: center;
 }
- 
+  */

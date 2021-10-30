@@ -2,34 +2,30 @@
 
 // "linear-gradient(#0575E6, #00F260)"
 
-async function bubbleSort(delay = 100) {
+async function bubbleSort() {
    let Bars = document.querySelectorAll(".bar");
-   
+
    for (let i = 0; i < Bars.length - 1; i++) {
       for (let j = 0; j < Bars.length - i - 1; j++) {
 
-         Bars[j].style.backgroundColor = "#FF4949"; // red
-         Bars[j + 1].style.backgroundColor = "#FF4949"; // red
+         Bars[j].style.background = "yellow"; // active
+         Bars[j + 1].style.background = "yellow"; // active
 
-         await new Promise(resolve =>
-            setTimeout(() => {
-               resolve();
-            }, delay)
-         );
+         await timePLs();
 
-         const val1 = Number(Bars[j].childNodes[0].innerHTML);
-         const val2 = Number(Bars[j + 1].childNodes[0].innerHTML);
+         const val1 = Number(Bars[j].style.height.slice(0, -2));
+         const val2 = Number(Bars[j + 1].style.height.slice(0, -2));
 
          if (val1 > val2) {
-            await swap(Bars[j], Bars[j + 1]);
+            await swap(j, j + 1);
             Bars = document.querySelectorAll(".bar");
          }
 
-         Bars[j].style.backgroundColor = "#58B7FF"; // blue
-         Bars[j + 1].style.backgroundColor = "#58B7FF"; // blue
+         Bars[j].style.background = "linear-gradient(#e66465, #9198e5)"; // unsorted
+         Bars[j + 1].style.background = "linear-gradient(#e66465, #9198e5)"; // unsorted
       }
-      
-      Bars[Bars.length - i - 1].style.backgroundColor = "#13CE66"; // green
+
+      Bars[Bars.length - i - 1].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
    }
-   Bars[0].style.backgroundColor = "#13CE66";
+   Bars[0].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
 }

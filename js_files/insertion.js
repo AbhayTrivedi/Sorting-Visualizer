@@ -1,28 +1,28 @@
 // Insertion sort
 
-async function insertionSort(delay = 1000) {
+async function insertionSort() {
    let Bars = document.querySelectorAll(".bar");
 
+   Bars[0].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+
    for (let i = 1; i < Bars.length; i++) {
-      let temp = Bars[i].childNodes[0].innerHTML;
       let j = i;
 
-      console.log(Bars[i].childNodes[0].innerHTML);
+      await timePLs();
 
-      await new Promise(resolve =>
-         setTimeout(() => {
-            resolve();
-         }, delay)
-      );
+      while (j > 0 && Number(Bars[j].style.height.slice(0, -2)) < Number(Bars[j - 1].style.height.slice(0, -2))) {
+         Bars[j].style.background = "yellow"; // active
+         Bars[j-1].style.background = "yellow"; // active
+         await swap(j, j - 1);
 
-      while (j > 0 && Number(Bars[j].childNodes[0].innerHTML) < Number(Bars[j - 1].childNodes[0].innerHTML)) {
-         await swap(Bars[j], Bars[j - 1]);
-         Bars = document.querySelectorAll(".bar");
+         await timePLs();
+         
+         Bars[j-1].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+         Bars[j].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
          j--;
       }
-      Bars = document.querySelectorAll(".bar");
-      // Bars[j].childNodes[0].innerHTML = temp;
-      Bars[i].style.backgroundColor = "#13CE66";
+
+      Bars[i].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
    }
 
 
