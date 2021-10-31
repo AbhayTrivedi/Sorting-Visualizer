@@ -1,7 +1,5 @@
 // Marge sort
 
-Bars = document.querySelectorAll(".bar");
-
 async function mergeSort(left, right) {
    if (left < right) {
       let mid = Math.floor(left + (right - left) / 2);
@@ -13,6 +11,7 @@ async function mergeSort(left, right) {
 }
 
 async function merge(left, right) {
+   let Bars = document.querySelectorAll(".bar");
    let i, j, k = left;
    let mid = Math.floor(left + (right - left) / 2);
    let n1 = mid - left + 1;
@@ -62,6 +61,4 @@ async function merge(left, right) {
       k++;
    }
 }
-
-
 
