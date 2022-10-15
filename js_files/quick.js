@@ -8,7 +8,7 @@ async function quickSort(low, high) {
    }
    if (low == high){
       let Bars = document.querySelectorAll(".bar");
-      Bars[low].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+      Bars[low].style.background = "linear-gradient(#087ee1, #05e8ba)"; // sorted
    }
 }
 
@@ -17,7 +17,7 @@ async function partition(low, high) {
    let Bars = document.querySelectorAll(".bar");
    let pivot = Number(Bars[high].style.height.slice(0, -2));
 
-   Bars[high].style.background = "linear-gradient(#30E8BF, #FF8235)"; //  pivot
+   Bars[high].style.background = "linear-gradient(#6c33a3, #8241b8)"; //  pivot
 
    let i = low;
 
@@ -30,22 +30,22 @@ async function partition(low, high) {
       if (Number(Bars[j].style.height.slice(0, -2)) < pivot) {
          await swap(i, j);
          await timePLs();
-         Bars[i].style.background = "linear-gradient(#e66465, #9198e5)"; // unsorted
+         Bars[i].style.background = "linear-gradient(#ee0979, #ff6a00)"; // unsorted
          i++;
          Bars[i].style.background = "yellow"; // active
       }
 
       if (i != j)
-         Bars[j].style.background = "linear-gradient(#e66465, #9198e5)"; // unsorted
+         Bars[j].style.background = "linear-gradient(#ee0979, #ff6a00)"; // unsorted
    }
 
 
    await swap(i, high);
-   Bars[i].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
-   Bars[high].style.background = "linear-gradient(#e66465, #9198e5)"; // unsorted
+   Bars[i].style.background = "linear-gradient(#087ee1, #05e8ba)"; // sorted
+   Bars[high].style.background = "linear-gradient(#ee0979, #ff6a00)"; // unsorted
 
    if (high == i)
-      Bars[high].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+      Bars[high].style.background = "linear-gradient(#087ee1, #05e8ba)"; // sorted
 
    await timePLs();
 

@@ -1,12 +1,10 @@
+let barContainer = document.getElementById("bars");
 
 var delay = 300;
-
 let bars = [];
 let marginSize = 0.1;
 let arraySize = 40;
 let width = 100 / arraySize - (2 * marginSize);
-
-let barContainer = document.getElementById("bars");
 
 document.getElementById("newArray").addEventListener("click", newArray);
 
@@ -23,13 +21,13 @@ function newArray() {
       bars[i].style.width = width + "%";
 
       barContainer.appendChild(bars[i]);
-
    }
 }
 
 window.onload = newArray();
 
 // Getting size input from slider range
+
 function sizeInput(x) {
    arraySize = x;
    width = 100 / arraySize - (2 * marginSize);
@@ -37,6 +35,7 @@ function sizeInput(x) {
 }
 
 // Getting size input from slider range
+
 function speedInput(x) {
    delay = 800 - x;
 }
@@ -44,6 +43,7 @@ function speedInput(x) {
 // Adding event listner to the buttons
 
 let buttons = document.getElementsByClassName("btn");
+
 for (let i = 1; i < buttons.length; i++) {
    buttons[i].addEventListener("click", (button) => {
       switch (button.target.innerHTML) {
@@ -55,8 +55,7 @@ for (let i = 1; i < buttons.length; i++) {
             break;
          case "Quick Sort": quickSort(0, document.querySelectorAll(".bar").length - 1);
             break;
-         case "Merge Sort": mergeSort(0, document.querySelectorAll(".bar").length-1);
-            // merge(0, document.querySelectorAll(".bar").length - 1);
+         case "Merge Sort": mergeSort(0, document.querySelectorAll(".bar").length - 1);
             break;
          default:
             console.log("default");
@@ -75,8 +74,6 @@ function swap(i, j) {
          const transform1 = Bars[i].style.height;
          const transform2 = Bars[j].style.height;
 
-         // console.log(transform1)
-
          Bars[i].style.height = transform2;
          Bars[j].style.height = transform1;
          resolve();
@@ -86,6 +83,7 @@ function swap(i, j) {
 
 
 // Delay function
+
 async function timePLs() {
    await new Promise(resolve =>
       setTimeout(() => {

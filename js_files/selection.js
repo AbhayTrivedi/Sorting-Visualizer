@@ -16,7 +16,7 @@ async function selectionSort() {
          const val = Number(Bars[j].style.height.slice(0, -2));
 
          if (val < minVal) {
-            Bars[minimum].style.background = "linear-gradient(#e66465, #9198e5)"; // unsorted
+            Bars[minimum].style.background = "linear-gradient(#ee0979, #ff6a00)"; // unsorted
             minimum = j;
             Bars[minimum].style.background = "yellow"; // active
          }
@@ -24,14 +24,14 @@ async function selectionSort() {
          await timePLs();
 
          if (j != minimum)
-            Bars[j].style.background = "linear-gradient(#e66465, #9198e5)"; // unsorted
+            Bars[j].style.background = "linear-gradient(#ee0979, #ff6a00)"; // unsorted
       }
 
       await swap(i, minimum);
-      Bars[minimum].style.background = "linear-gradient(#e66465, #9198e5)"; // unsorted
-      Bars[i].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+      Bars[minimum].style.background = "linear-gradient(#ee0979, #ff6a00)"; // unsorted
+      Bars[i].style.background = "linear-gradient(#087ee1, #05e8ba)"; // sorted
    }
 
-   Bars[Bars.length - 1].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+   Bars[Bars.length - 1].style.background = "linear-gradient(#087ee1, #05e8ba)"; // sorted
 
 }

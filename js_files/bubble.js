@@ -1,7 +1,5 @@
 // Bubble Sort
 
-// "linear-gradient(#0575E6, #00F260)"
-
 async function bubbleSort() {
    let Bars = document.querySelectorAll(".bar");
 
@@ -21,11 +19,11 @@ async function bubbleSort() {
             Bars = document.querySelectorAll(".bar");
          }
 
-         Bars[j].style.background = "linear-gradient(#e66465, #9198e5)"; // unsorted
-         Bars[j + 1].style.background = "linear-gradient(#e66465, #9198e5)"; // unsorted
+         Bars[j].style.background = "linear-gradient(#ee0979, #ff6a00)"; // unsorted
+         Bars[j + 1].style.background = "linear-gradient(#ee0979, #ff6a00)"; // unsorted
       }
 
-      Bars[Bars.length - i - 1].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+      Bars[Bars.length - i - 1].style.background = "linear-gradient(#087ee1, #05e8ba)"; // sorted
    }
-   Bars[0].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+   Bars[0].style.background = "linear-gradient(#087ee1, #05e8ba)"; // sorted
 }

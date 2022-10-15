@@ -43,20 +43,20 @@ async function merge(left, right) {
          Bars[k].style.height = `${R[j]}px`;
          j++;
       }
-      Bars[k].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+      Bars[k].style.background = "linear-gradient(#087ee1, #05e8ba)"; // sorted
       k++;
    }
    while (i < n1) {
       await timePLs();
       Bars[k].style.height = `${L[i]}px`;
-      Bars[k].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+      Bars[k].style.background = "linear-gradient(#087ee1, #05e8ba)"; // sorted
       i++;
       k++;
    }
    while (j < n2) {
       await timePLs();
       Bars[k].style.height = `${R[j]}px`;
-      Bars[k].style.background = "linear-gradient(#0575E6, #00F260)"; // sorted
+      Bars[k].style.background = "linear-gradient(#087ee1, #05e8ba)"; // sorted
       j++;
       k++;
    }
